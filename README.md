@@ -1,7 +1,7 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`4.4.0`, `4.4.0-ubuntu18.04`, `latest`](https://github.com/cosmos-docker/ubuntu18.04/Dockerfile)
--	[`4.4.0-centos7`](https://github.com/cosmos-docker/centos7/Dockerfile)
+-	[`4.4.0`, `4.4.0-ubuntu18.04`, `ubuntu18.04`, `latest`](https://github.com/BallAerospace/cosmos-docker/blob/master/ubuntu18.04/Dockerfile)
+-	[`4.4.0-centos7`, `centos7`](https://github.com/BallAerospace/cosmos-docker/blob/master/centos7/Dockerfile)
 
 # Quick reference
 
