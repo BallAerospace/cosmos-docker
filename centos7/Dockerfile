@@ -96,7 +96,7 @@ RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 ENV COSMOS_VERSION 4.4.0
 
 RUN --mount=type=secret,id=sslsecret SSL_CERT_FILE=/run/secrets/sslsecret gem install rake --no-document
-RUN --mount=type=secret,id=sslsecret SSL_CERT_FILE=/run/secrets/sslsecret gem install cosmos -v $COSMOS_VERSION s--no-document
+RUN --mount=type=secret,id=sslsecret SSL_CERT_FILE=/run/secrets/sslsecret gem install cosmos -v ${COSMOS_VERSION} --no-document
 RUN cosmos demo /cosmos
 
 WORKDIR /cosmos
