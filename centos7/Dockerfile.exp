@@ -1,3 +1,5 @@
+# syntax = docker/dockerfile:1.0-experimental
+
 FROM centos:7
 
 RUN yum update -y && yum install -y \
@@ -39,7 +41,7 @@ ENV RUBY_VERSION 2.5.7
 ENV RUBY_DOWNLOAD_SHA256 201870e8f58957d542233fef588b1d76f7bf962fea44dcbd2237f4a5899a3f95
 ENV RUBYGEMS_VERSION 3.0.3
 
-RUN set -eux; \
+RUN --mount=type=secret,id=sslsecret set -eux; \
   export SSL_CERT_FILE=/run/secrets/sslsecret; \
 	\
 	wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; \
@@ -93,8 +95,8 @@ RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
 ENV COSMOS_VERSION 4.4.0
 
-RUN gem install rake --no-document
-RUN gem install cosmos -v ${COSMOS_VERSION} --no-document
+RUN --mount=type=secret,id=sslsecret SSL_CERT_FILE=/run/secrets/sslsecret gem install rake --no-document
+RUN --mount=type=secret,id=sslsecret SSL_CERT_FILE=/run/secrets/sslsecret gem install cosmos -v ${COSMOS_VERSION} --no-document
 RUN cosmos demo /cosmos
 
 WORKDIR /cosmos
