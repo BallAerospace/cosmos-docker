@@ -62,17 +62,17 @@ To run with a COSMOS configuration stored on the Docker host, mount in your conf
 
 By default these images should build and work without any major assumptions.
 
-If you are behind a corporate firewall, the images support passing in a local certificate chain using Docker build secrets, that may allow them to build correctly on your network.  For this to work, you must be running docker with "Dameon -> Experimental features" enabled.
+If you are behind a corporate firewall, the centos7 images support passing in a local certificate chain using Docker build secrets, that may allow them to build correctly on your network.  For this to work, you must be running docker with "Dameon -> Experimental features" enabled.
 
 Then you should be able to build with a command similar to this:
 
 ```console
 # Linux / Mac
-DOCKER_BUILDKIT=1 docker build --secret=id=sslsecret,src=/certpath/cert.pem .
+DOCKER_BUILDKIT=1 docker build --secret=id=sslsecret,src=/certpath/cert.pem -f Dockerfile.exp .
 
 # Windows
 set DOCKER_BUILDKIT=1
-winpty docker build --secret=id=sslsecret,src=C:/certpath/cert.pem .
+winpty docker build --secret=id=sslsecret,src=C:/certpath/cert.pem -f Dockerfile.exp .
 ```
 
 Note that on Windows, we recommend running docker through winpty.  It seems to fix the tty output and prevent container lockups especially when editing files in vi and accidently pressing multiple keys simulataneously on the keyboard.
