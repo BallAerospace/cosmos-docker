@@ -90,7 +90,7 @@ RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
 # END CONTENT FROM OFFICIAL RUBY DOCKERFILE
 
-ENV COSMOS_VERSION 4.4.0
+ENV COSMOS_VERSION 4.4.1
 
 RUN gem install rake --no-document
 RUN gem install cosmos -v ${COSMOS_VERSION} --no-document
@@ -99,3 +99,4 @@ RUN cosmos demo /cosmos
 WORKDIR /cosmos
 # This works around an issue with setpgrp if you already have it in this environment
 CMD true && ruby Launcher
+
