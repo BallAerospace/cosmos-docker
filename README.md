@@ -1,7 +1,9 @@
 # Supported tags and respective `Dockerfile` links
 
--	[`4.4.2`, `4.4.2-ubuntu18.04`, `ubuntu18.04`, `latest`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.2/ubuntu18.04/Dockerfile)
--	[`4.4.2-centos7`, `centos7`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.2/centos7/Dockerfile)
+-	[`4.5.0`, `4.5.0-ubuntu18.04`, `ubuntu18.04`, `latest`](https://github.com/BallAerospace/cosmos-docker/blob/v4.5.0/ubuntu18.04/Dockerfile)
+-	[`4.5.0-centos7`, `centos7`](https://github.com/BallAerospace/cosmos-docker/blob/v4.5.0/centos7/Dockerfile)
+-	[`4.4.2`, `4.4.2-ubuntu18.04`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.2/ubuntu18.04/Dockerfile)
+-	[`4.4.2-centos7`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.2/centos7/Dockerfile)
 -	[`4.4.1`, `4.4.1-ubuntu18.04`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.1/ubuntu18.04/Dockerfile)
 -	[`4.4.1-centos7`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.1/centos7/Dockerfile)
 -	[`4.4.0`, `4.4.0-ubuntu18.04`](https://github.com/BallAerospace/cosmos-docker/blob/v4.4.0/ubuntu18.04/Dockerfile)
