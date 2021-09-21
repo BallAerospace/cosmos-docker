@@ -90,7 +90,7 @@ RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 
 # END CONTENT FROM OFFICIAL RUBY DOCKERFILE
 
-ENV COSMOS_VERSION 4.5.0
+ENV COSMOS_VERSION 4.5.1
 
 RUN gem install rake --no-document
 RUN gem install cosmos -v ${COSMOS_VERSION} --no-document
