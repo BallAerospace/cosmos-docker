@@ -26,7 +26,7 @@ RUN apt-get update -y && apt-get install -y \
   vim \
   zlib1g-dev
 
-ENV COSMOS_VERSION 4.5.1
+ENV COSMOS_VERSION 4.5.2
 
 RUN gem install rake --no-document
 RUN gem install cosmos -v ${COSMOS_VERSION} --no-document
